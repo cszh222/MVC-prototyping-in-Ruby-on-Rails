@@ -1,0 +1,18 @@
+<p>
+  <b>Status:</b>
+  <%=h @order.status %>
+</p>
+
+<p>
+  <b>Items:</b>
+  <%=h @order.items %>
+</p>
+
+<p>
+  <b>Users:</b>
+  <%=h @order.users %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
