@@ -1,0 +1,43 @@
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /mounts/u-zon-d2/ugrad/cszh222/ecommerce/config/../vendor/rails/railties/lib/rails/gem_dependency.rb:21.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /mounts/u-zon-d2/ugrad/cszh222/ecommerce/config/../vendor/rails/railties/lib/rails/vendor_gem_source_index.rb:100.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+server: invalid argument: -pXXXX
+[2013-10-21 22:16:57] INFO  WEBrick 1.3.1
+[2013-10-21 22:16:57] INFO  ruby 1.8.7 (2011-06-30) [x86_64-linux]
+[2013-10-21 22:16:57] INFO  WEBrick::HTTPServer#start: pid=22826 port=3000
+[2013-10-21 22:17:26] ERROR SystemExit: exit
+	/mounts/u-zon-d2/ugrad/cszh222/ecommerce/vendor/rails/railties/lib/commands/server.rb:106:in `exit'
+NOTE: Gem.source_index is deprecated, use Specification. It will be removed on or after 2011-11-01.
+Gem.source_index called from /mounts/u-zon-d2/ugrad/cszh222/ecommerce/config/../vendor/rails/railties/lib/rails/gem_dependency.rb:21.
+NOTE: Gem::SourceIndex#initialize is deprecated with no replacement. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#initialize called from /mounts/u-zon-d2/ugrad/cszh222/ecommerce/config/../vendor/rails/railties/lib/rails/vendor_gem_source_index.rb:100.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+NOTE: Gem::SourceIndex#add_spec is deprecated, use Specification.add_spec. It will be removed on or after 2011-11-01.
+Gem::SourceIndex#add_spec called from /usr/lib/ruby/vendor_ruby/1.8/rubygems/source_index.rb:91.
+[2013-10-21 22:17:41] INFO  WEBrick 1.3.1
+[2013-10-21 22:17:41] INFO  ruby 1.8.7 (2011-06-30) [x86_64-linux]
+[2013-10-21 22:17:41] INFO  WEBrick::HTTPServer#start: pid=22966 port=3000
+[2013-10-21 22:18:35] ERROR SignalException: SIGTERM
+	/usr/lib/ruby/1.8/webrick/server.rb:91:in `select'

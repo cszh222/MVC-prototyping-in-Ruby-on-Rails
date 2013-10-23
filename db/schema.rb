@@ -9,11 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131022012615) do
+ActiveRecord::Schema.define(:version => 20131023184107) do
 
   create_table "catalogs", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "company", :primary_key => "bankid", :force => true do |t|
@@ -36,6 +37,8 @@ ActiveRecord::Schema.define(:version => 20131022012615) do
     t.integer  "price",      :limit => 10, :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "catalog_id"
+    t.string   "desc"
   end
 
   create_table "orders", :force => true do |t|

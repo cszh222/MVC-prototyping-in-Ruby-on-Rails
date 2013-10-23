@@ -1075,3 +1075,236 @@ ActionView::TemplateError (undefined method `items' for #<ShoppingCart:0x7f1a9cf
 Rendered rescues/_trace (112.6ms)
 Rendered rescues/_request_and_response (0.4ms)
 Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 96.29.163.196 at 2013-10-21 22:12:50) [GET]
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM `orders` [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://cor.cs.uky.edu/orders]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 96.29.163.196 at 2013-10-21 22:18:01) [GET]
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 34ms (View: 26, DB: 2) | 200 OK [http://cor.cs.uky.edu/items]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 96.29.163.196 at 2013-10-21 22:18:36) [GET]
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://cor.cs.uky.edu/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OrdersController#index (for 96.29.163.196 at 2013-10-21 22:18:42) [GET]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM `orders` [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 28ms (View: 18, DB: 0) | 200 OK [http://cor.cs.uky.edu/orders]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 96.29.163.196 at 2013-10-21 22:19:19) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://cor.cs.uky.edu/items]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 96.29.163.196 at 2013-10-21 22:19:28) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 77ms (View: 8, DB: 1) | 200 OK [http://cor.cs.uky.edu/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 10.163.173.148 at 2013-10-22 17:29:53) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 61ms (View: 47, DB: 2) | 200 OK [http://cor.cs.uky.edu/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131022012056)
+Migrating to CreateShoppingCarts (20131022012212)
+Migrating to CreateOrders (20131022012309)
+Migrating to CreateInventories (20131022012551)
+Migrating to CreateCatalogs (20131022012615)
+Migrating to AddCatalogToItems (20131023182235)
+  [4;35;1mSQL (150.0ms)[0m   [0mALTER TABLE `items` ADD `catalog_id` int(11)[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131023182235')[0m
+Migrating to AddNameToCatalog (20131023182301)
+  [4;35;1mSQL (81.8ms)[0m   [0mALTER TABLE `catalogs` ADD `name` varchar(255)[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131023182301')[0m
+Migrating to RemoveHasManyFromCatalog (20131023182327)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Can't DROP 'has_many'; check that column/key exists: ALTER TABLE `catalogs` DROP `has_many`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131022012056)
+Migrating to CreateShoppingCarts (20131022012212)
+Migrating to CreateOrders (20131022012309)
+Migrating to CreateInventories (20131022012551)
+Migrating to CreateCatalogs (20131022012615)
+Migrating to AddCatalogToItems (20131023182235)
+Migrating to AddNameToCatalog (20131023182301)
+Migrating to RemoveHasManyFromCatalog (20131023182327)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Can't DROP 'has_many'; check that column/key exists: ALTER TABLE `catalogs` DROP `has_many`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131022012056)
+Migrating to CreateShoppingCarts (20131022012212)
+Migrating to CreateOrders (20131022012309)
+Migrating to CreateInventories (20131022012551)
+Migrating to CreateCatalogs (20131022012615)
+Migrating to AddCatalogToItems (20131023182235)
+Migrating to AddNameToCatalog (20131023182301)
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `catalogs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `catalogs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `catalogs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `company`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `company`[0m
+  [4;35;1mSQL (12.7ms)[0m   [0mSHOW KEYS FROM `company`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `employee`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `employee`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `employee`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `inventories`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `inventories`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `inventories`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `orders`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `shopping_carts`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `shopping_carts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `shopping_carts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `works`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `works`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `works`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCatalog Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `catalogs`[0m
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateItems (20131022012056)
+Migrating to CreateShoppingCarts (20131022012212)
+Migrating to CreateOrders (20131022012309)
+Migrating to CreateInventories (20131022012551)
+Migrating to CreateCatalogs (20131022012615)
+Migrating to AddCatalogToItems (20131023182235)
+Migrating to AddNameToCatalog (20131023182301)
+Migrating to AddDescToItem (20131023184107)
+  [4;35;1mSQL (125.2ms)[0m   [0mALTER TABLE `items` ADD `desc` varchar(255)[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20131023184107')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `catalogs`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `catalogs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `catalogs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `company`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `company`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `company`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `employee`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `employee`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `employee`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `inventories`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `inventories`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `inventories`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `items`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `orders`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `shopping_carts`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `shopping_carts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `shopping_carts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `works`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `works`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `works`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCatalog Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `catalogs`[0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCatalog Create (0.4ms)[0m   [0;1mINSERT INTO `catalogs` (`name`, `updated_at`, `created_at`) VALUES('CDs', '2013-10-23 18:42:55', '2013-10-23 18:42:55')[0m
+  [4;35;1mSQL (26.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.4ms)[0m   [0mINSERT INTO `items` (`name`, `price`, `updated_at`, `created_at`, `catalog_id`, `desc`) VALUES('Christmas', NULL, '2013-10-23 18:43:27', '2013-10-23 18:43:27', 1, 'Christmas by Buble')[0m
+  [4;36;1mSQL (30.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.catalog_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 10.20.64.167 at 2013-10-23 14:46:35) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 144ms (View: 69, DB: 2) | 200 OK [http://cor.cs.uky.edu/items]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 10.20.64.167 at 2013-10-23 14:46:43) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://cor.cs.uky.edu/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 10.20.64.167 at 2013-10-23 14:46:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 2) [0m
+Rendering template within layouts/items
+Rendering items/show
+Completed in 48ms (View: 38, DB: 2) | 200 OK [http://cor.cs.uky.edu/items/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 10.20.64.167 at 2013-10-23 14:46:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/show
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://cor.cs.uky.edu/items/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 10.20.64.167 at 2013-10-23 14:47:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/show
+Completed in 77ms (View: 5, DB: 2) | 200 OK [http://cor.cs.uky.edu/items/1]
