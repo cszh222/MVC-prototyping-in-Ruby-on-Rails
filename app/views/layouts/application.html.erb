@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<div id="container" style="width:500px">
+
+<div id="header">
+<h1 style="margin-bottom:0;"><%=image_tag("../jpeg.jpg")%></h1></div>
+
+<div id="menu" style="background-color:#005DAA">
+<b>Menu bar</b> 
+&nbsp; &nbsp; Link 1 
+&nbsp; &nbsp; Link 2
+</div>
+
+<div id="notice">
+<%= notice %>
+</div>
+
+<div id="content">
+
+<%= yield%>
+
+</div>
+
+<div id="footer">
+footer stuff</div>
+
+</div>
+
+</body>
+</htm>
+
